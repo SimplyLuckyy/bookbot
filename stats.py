@@ -3,7 +3,7 @@ def count_words(fullwork):
     words = fullwork.split()
     for word in words:
         num_words += 1
-    print(f"{num_words} words found in the document")
+    return num_words
 
 def count_characters(fullwork):
     num_characters = {}
@@ -16,7 +16,7 @@ def count_characters(fullwork):
             num_characters[character] = 1
     return num_characters
 
-def sorted_list(initial_dict):
+def sorter(initial_dict):
     new_list = []
     for char, num in initial_dict.items():
         new_list.append({"char": char,"num": num})
@@ -25,4 +25,4 @@ def sorted_list(initial_dict):
         return items["num"]
         
     new_list.sort(reverse=True, key=sort_on)
-    print(new_list)
+    return new_list
